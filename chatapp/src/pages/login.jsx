@@ -10,8 +10,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-     const res = await axios.post('http://localhost:7000/api/login', {
-
+     const res = await axios.post('https://socialback-g9cr.onrender.com/api/login', {
         email,
         password,
       },

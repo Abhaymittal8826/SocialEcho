@@ -12,7 +12,7 @@ export default function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:7000/api/register', {
+      const res = await axios.post('https://socialback-g9cr.onrender.com/api/register', {
         username,
         email,
         password,

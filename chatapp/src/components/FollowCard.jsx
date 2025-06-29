@@ -7,8 +7,8 @@ export default function FollowCard({ user, onToggleFollow }) {
   const handleToggleFollow = async () => {
     try {
       const url = isFollowing
-        ? `http://localhost:7000/posts/unfollow/${user._id}`
-        : `http://localhost:7000/posts/follow/${user._id}`;
+        ? `https://socialback-g9cr.onrender.com/posts/unfollow/${user._id}`
+        : `https://socialback-g9cr.onrender.com/posts/follow/${user._id}`;
 
       await axios.post(url, {}, { withCredentials: true });
 
