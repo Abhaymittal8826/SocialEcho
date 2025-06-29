@@ -29,7 +29,7 @@ export default function CreatePostDialog({ setPosts }) {
     if (image) formData.append('image', image);
 
     try {
-      const res = await axios.post("https://socialchatback.vercel.app/posts/upload", formData, {
+      const res = await axios.post("http://localhost:7000/posts/upload", formData, {
         withCredentials: true,
         headers: {
           "Content-Type": "multipart/form-data",

@@ -30,7 +30,7 @@ export const addComment = async (req, res) => {
       msg: 'Comment added',
       comment: {
         content: populatedComment.content,
-        username: populatedComment.author.username,
+        // username: populatedComment.author.username,
         createdAt: populatedComment.createdAt,
       }
     });

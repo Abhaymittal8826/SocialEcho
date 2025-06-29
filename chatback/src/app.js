@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: 'socialchatapp-k9uokyxtd-abhay-mittals-projects-15f13807.vercel.app',
+  origin: 'http://localhost:5173',
   credentials: true,
 }));
 

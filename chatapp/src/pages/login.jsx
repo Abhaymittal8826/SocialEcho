@@ -10,7 +10,8 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-     const res = await axios.post('https://socialchatback.vercel.app/api/login', {
+     const res = await axios.post('http://localhost:7000/api/login', {
+
         email,
         password,
       },
