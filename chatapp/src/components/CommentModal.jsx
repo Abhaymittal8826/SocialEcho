@@ -17,7 +17,7 @@ export default function CommentModal({ open, handleOpen, postId }) {
   useEffect(() => {
     if (open) {
       axios
-        .get(`http://localhost:7000/posts/comments/${postId}`, {
+        .get(`https://socialchatback.vercel.app/posts/comments/${postId}`, {
           withCredentials: true,
         })
         .then((res) => setComments(res.data))
@@ -34,7 +34,7 @@ export default function CommentModal({ open, handleOpen, postId }) {
 
     try {
       const res = await axios.post(
-        `http://localhost:7000/posts/comments/${postId}`,
+        `https://socialchatback.vercel.app/posts/comments/${postId}`,
         { content: newComment },
         { withCredentials: true }
       );

@@ -9,11 +9,11 @@ export default function Dashboard() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:7000/posts/dashboard', { withCredentials: true })
+    axios.get('https://socialchatback.vercel.app/posts/dashboard', { withCredentials: true })
       .then(res => setPosts(res.data))
       .catch(err => console.error('❌ Failed to fetch posts:', err));
 
-    axios.get('http://localhost:7000/posts/follow-status', { withCredentials: true })
+    axios.get('https://socialchatback.vercel.app/posts/follow-status', { withCredentials: true })
       .then(res => setUsers(res.data))
       .catch(err => console.error('❌ Failed to fetch users:', err));
   }, []);

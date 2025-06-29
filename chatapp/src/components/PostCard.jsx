@@ -11,7 +11,7 @@ export default function PostCard({ post }) {
   const handleLike = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:7000/posts/like/${post._id}`,
+        `https://socialchatback.vercel.app/posts/like/${post._id}`,
         {},
         { withCredentials: true }
       );

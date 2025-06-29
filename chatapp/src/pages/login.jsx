@@ -6,11 +6,11 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-
+           
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:7000/api/login',{
+     const res = await axios.post('https://socialchatback.vercel.app/api/login', {
         email,
         password,
       },
